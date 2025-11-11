@@ -1,0 +1,30 @@
+<!-- Exemplos de requisições (use Postman / Thunder Client):
+Criar livro
+
+POST http://localhost:3000/livros
+Body JSON: { "titulo": "Livro X", "autor": "Autor Y" }
+Listar livros
+
+GET http://localhost:3000/livros
+Buscar livro
+
+GET http://localhost:3000/livros/1
+Atualizar livro
+
+PUT http://localhost:3000/livros/1
+Body JSON: { "titulo": "Novo Título", "autor": "Novo Autor" }
+Deletar livro
+
+DELETE http://localhost:3000/livros/1
+Listar avaliações (com usuário e livro)
+
+GET http://localhost:3000/avaliacoes
+Criar avaliação
+
+POST http://localhost:3000/avaliacoes
+Body JSON: { "usuario_id": 1, "livro_id": 1, "nota": 8.5, "comentario": "Ótimo" }
+Observações importantes
+
+O controller de avaliações espera que exista a tabela usuarios com coluna nome (para o JOIN). Se sua base tem outro nome de coluna, ajuste a query em listarAvaliacoes.
+Evitei manter funções extras (obter/atualizar/deletar avaliações) porque a atividade pedia apenas GET /avaliacoes e POST /avaliacoes. Se quiser os endpoints completos para avaliações (GET /avaliacoes/:id, PUT, DELETE), eu adiciono sem problema.
+Se o servidor falhar ao iniciar por causa da conexão com o banco (import de db.js faz await createConnection), verifique credenciais em db.js. -->
